@@ -3,17 +3,18 @@ dependencies: []
 services:
 - source: /runtime/services/tables.yml
   client_config: {}
-  server_config: {}
+  server_config: {auto_create_missing_columns: true}
 startup: {type: form, module: Homepage}
-package_name: News_App
+package_name: Configuration_App
 allow_embedding: false
-name: Database-backed app
+name: Konfiguracja skryptu
 runtime_options:
   version: 2
   client_version: '3'
   server_version: python3-sandbox
   server_spec: null
   server_spec_disabled: {requirements: '', base: python310-minimal}
+metadata: {title: Konfiguracja skryptu, description: Konfiguracja skryptu AMI, logo_img: 'asset:android-chrome-192x192.png'}
 startup_form: null
 db_schema:
   categories:
@@ -35,14 +36,11 @@ db_schema:
     - name: content
       admin_ui: {width: 200}
       type: string
-    - name: image
-      admin_ui: {width: 200}
-      type: media
     - name: created
-      admin_ui: {width: 200}
+      admin_ui: {order: 6, width: 200}
       type: datetime
     - name: updated
-      admin_ui: {width: 200}
+      admin_ui: {order: 7, width: 200}
       type: datetime
     - name: category
       admin_ui: {width: 200}

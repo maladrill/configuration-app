@@ -9,5 +9,6 @@ unique_ids:
   server_modules:
     ServerModule1: '1669297017291241838743870.52295'
   assets:
+    android-chrome-192x192.png: '1713615126099593786319645.2877'
     standard-page.html: ZJZJ5QIRYGBNKV2UF22CFMCG6IVAXZFB
     theme.css: AODQ72BOWB6KZMEX2CIJL5C4PBHWZTDN
