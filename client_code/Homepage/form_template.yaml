@@ -1,8 +1,8 @@
 is_package: true
 container:
   type: HtmlTemplate
-  properties: {html: '@theme:standard-page.html', background: 'theme:On Primary Container',
-    foreground: '#ffffff', border: '#ffffff', visible: true}
+  properties: {html: '@theme:standard-page.html', background: '#ffffff', foreground: '#ffffff',
+    border: ' #00bfff', visible: true}
   data_bindings: []
 components:
 - type: ColumnPanel
@@ -11,6 +11,15 @@ components:
   name: content_panel
   layout_properties: {slot: default}
   components:
+  - name: xy_panel_1
+    properties: {height: 100}
+    type: XYPanel
+    layout_properties: {grid_position: 'GLTPRD,QJBVFU'}
+    components:
+    - name: spacer_1
+      properties: {height: 32}
+      type: Spacer
+      layout_properties: {x: 473.42857360839844, y: 50.00001525878906, width: 200}
   - type: Button
     properties: {role: filled-button, align: center, tooltip: Dodaj wpisy konfiguracji tekstowej dla konkretnego skryptu AGI,
       border: '', enabled: true, foreground: '', visible: true, text: 'Dodaj wpis
@@ -27,9 +36,10 @@ components:
     name: entries_panel
     layout_properties: {grid_position: 'IUOBLZ,LOVSGX'}
 - type: Label
-  properties: {role: title, align: left, tooltip: '', border: '', foreground: '',
+  properties: {role: title, align: center, tooltip: '', border: '', foreground: ' #00bfff',
     visible: true, text: Konfiguracja skryptu, font_size: null, font: '', spacing_above: small,
-    icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-    underline: false, icon: ''}
+    icon_align: left, spacing_below: small, italic: false, background: '#ffffff',
+    bold: true, underline: false, icon: ''}
   name: label_1
   layout_properties: {slot: title}
+  data_bindings: []
